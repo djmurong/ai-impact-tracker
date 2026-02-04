@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(() => {
     return {
+      base: '/ai-impact-tracker/',
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -13,6 +14,14 @@ export default defineConfig(() => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      build: {
+        cssCodeSplit: false,
+        rollupOptions: {
+          output: {
+            manualChunks: undefined,
+          },
+        },
+      },
     };
 });
