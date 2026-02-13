@@ -22,3 +22,28 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Extracted Excel data (run scripts/extract-excel.cjs to regenerate)
+data/dashboard-data-extracted.json
+
+# Environment files (keep template committed)
+.env
+.env.*
+!.env.example
+
+# Secrets and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+*credentials*.json
+secrets.*
+*.secret
+
+# Local secret tooling
+.envrc

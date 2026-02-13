@@ -9,6 +9,8 @@ export const MetricCard: React.FC<MetricCardProps> = ({
   change, 
   unit, 
   description, 
+  cite,
+  citeUrl,
   icon 
 }) => {
   return (
@@ -34,6 +36,18 @@ export const MetricCard: React.FC<MetricCardProps> = ({
         <p className="text-slate-500 text-xs mt-2 leading-relaxed">
           {description}
         </p>
+        {(cite || citeUrl) && (
+          <p className="text-slate-600 text-[10px] mt-2 leading-snug border-t border-slate-800/80 pt-2">
+            <span className="text-slate-500 uppercase tracking-wider font-semibold">Source: </span>
+            {citeUrl ? (
+              <a href={citeUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline cursor-pointer">
+                {cite || citeUrl}
+              </a>
+            ) : (
+              <span>{cite}</span>
+            )}
+          </p>
+        )}
       </div>
     </div>
   );
