@@ -69,7 +69,17 @@ The AI Impact Tracker is an interactive web application designed to aggregate an
 npm run build
 ```
 
-The production build will be created in the `dist` directory.
+The production build is written directly to the `docs` directory for GitHub Pages.
+
+### GitHub Pages Deployment
+
+After making site changes, run:
+
+```bash
+npm run build
+```
+
+Then commit and push the updated `docs/` folder so GitHub Pages serves the latest version.
 
 ### Preview Production Build
 
