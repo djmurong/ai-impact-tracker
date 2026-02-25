@@ -1,15 +1,23 @@
 /* Full-height container for iframe embedding */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #020617;
   overflow: hidden;
 }
 
+/* Light theme (default when .dark is not on html) */
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Dark theme */
+html.dark body {
+  background-color: #020617;
   color: #f8fafc;
 }
 
@@ -23,11 +31,24 @@ body {
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  background: #334155;
   border-radius: 10px;
 }
 
+/* Light scrollbar */
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
 .custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark scrollbar */
+html.dark .custom-scroll::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+html.dark .custom-scroll::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
 

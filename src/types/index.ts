@@ -1,5 +1,4 @@
-
-import React from 'react';
+import type React from 'react';
 
 export type Category = 'Economic' | 'Social' | 'Political' | 'Capability' | 'Overview';
 
