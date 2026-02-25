@@ -76,13 +76,13 @@ const AboutPage: React.FC = () => {
           <label className="text-slate-600 dark:text-slate-500 text-[9px] uppercase font-black tracking-widest mb-4 block">
             Team
           </label>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-6">
             {TEAM_MEMBERS.map((member) => (
               <article
                 key={member.name}
                 className="group overflow-hidden rounded-xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none"
               >
-                <div className="relative h-[360px] w-full overflow-hidden">
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
                   <img
                     src={member.imageUrl}
                     alt={`${member.name} placeholder portrait`}
